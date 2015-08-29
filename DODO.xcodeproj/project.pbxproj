@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B273A0E1B91616F0065A4C5 /* LocalPersistSQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B273A0D1B91616F0065A4C5 /* LocalPersistSQLite.swift */; };
+		6B273A111B91624F0065A4C5 /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B273A0F1B91624F0065A4C5 /* SQLiteDB.swift */; };
+		6B273A121B91624F0065A4C5 /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B273A101B91624F0065A4C5 /* String-Extras.swift */; };
+		6B273A161B91985D0065A4C5 /* TaskNowTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B273A151B91985D0065A4C5 /* TaskNowTable.m */; };
+		6B273A191B9198DC0065A4C5 /* TaskLogTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B273A181B9198DC0065A4C5 /* TaskLogTable.m */; };
+		6B273A1C1B919A1B0065A4C5 /* TaskStatusTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B273A1B1B919A1B0065A4C5 /* TaskStatusTable.m */; };
+		6B273A1F1B91B6370065A4C5 /* LocalPersistOC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B273A1E1B91B6370065A4C5 /* LocalPersistOC.m */; };
+		6B273A211B91E1110065A4C5 /* DODOData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6B273A201B91E1110065A4C5 /* DODOData.sqlite */; };
 		6B41A9F11B8877DA000E1ABA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41A9F01B8877DA000E1ABA /* main.m */; };
 		6B41A9F41B8877DA000E1ABA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41A9F31B8877DA000E1ABA /* AppDelegate.m */; };
 		6B41A9F71B8877DA000E1ABA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41A9F61B8877DA000E1ABA /* ViewController.m */; };
@@ -14,6 +22,22 @@
 		6B41A9FC1B8877DA000E1ABA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B41A9FB1B8877DA000E1ABA /* Images.xcassets */; };
 		6B41A9FF1B8877DA000E1ABA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B41A9FD1B8877DA000E1ABA /* LaunchScreen.xib */; };
 		6B41AA0B1B8877DA000E1ABA /* DODOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41AA0A1B8877DA000E1ABA /* DODOTests.m */; };
+		6B41AA151B887879000E1ABA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B41AA141B887879000E1ABA /* CoreLocation.framework */; };
+		6B41AA171B88788B000E1ABA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B41AA161B88788B000E1ABA /* Security.framework */; };
+		6B41AA191B8878B1000E1ABA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B41AA181B8878B1000E1ABA /* CoreGraphics.framework */; };
+		6B41AA1B1B8878BD000E1ABA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B41AA1A1B8878BD000E1ABA /* MobileCoreServices.framework */; };
+		6B41AA1D1B8878C5000E1ABA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B41AA1C1B8878C5000E1ABA /* CFNetwork.framework */; };
+		6B41AA1F1B8878D5000E1ABA /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B41AA1E1B8878D5000E1ABA /* CoreTelephony.framework */; };
+		6B41AA211B8878E3000E1ABA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B41AA201B8878E3000E1ABA /* SystemConfiguration.framework */; };
+		6B41AA231B8878F0000E1ABA /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B41AA221B8878F0000E1ABA /* libz.1.2.5.dylib */; };
+		6B41AA251B8878FB000E1ABA /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B41AA241B8878FB000E1ABA /* libicucore.dylib */; };
+		6B41AA271B887909000E1ABA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B41AA261B887909000E1ABA /* libsqlite3.dylib */; };
+		6B41AA291B887911000E1ABA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B41AA281B887911000E1ABA /* AVFoundation.framework */; };
+		6B41AA2B1B88791C000E1ABA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B41AA2A1B88791C000E1ABA /* MediaPlayer.framework */; };
+		6B41AA2D1B88797E000E1ABA /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B41AA2C1B88797E000E1ABA /* BmobSDK.framework */; };
+		6B41AA301B8879F9000E1ABA /* RemoteSynBmob.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41AA2F1B8879F9000E1ABA /* RemoteSynBmob.m */; };
+		6B41AA341B887BC9000E1ABA /* TaskStoreTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41AA331B887BC9000E1ABA /* TaskStoreTable.m */; };
+		6B41AA371B887EB7000E1ABA /* UserTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41AA361B887EB7000E1ABA /* UserTable.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +51,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B273A0C1B91616F0065A4C5 /* DODO-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DODO-Bridging-Header.h"; sourceTree = "<group>"; };
+		6B273A0D1B91616F0065A4C5 /* LocalPersistSQLite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalPersistSQLite.swift; sourceTree = "<group>"; };
+		6B273A0F1B91624F0065A4C5 /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDB.swift; sourceTree = "<group>"; };
+		6B273A101B91624F0065A4C5 /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-Extras.swift"; sourceTree = "<group>"; };
+		6B273A141B91985D0065A4C5 /* TaskNowTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskNowTable.h; sourceTree = "<group>"; };
+		6B273A151B91985D0065A4C5 /* TaskNowTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskNowTable.m; sourceTree = "<group>"; };
+		6B273A171B9198DC0065A4C5 /* TaskLogTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskLogTable.h; sourceTree = "<group>"; };
+		6B273A181B9198DC0065A4C5 /* TaskLogTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskLogTable.m; sourceTree = "<group>"; };
+		6B273A1A1B919A1B0065A4C5 /* TaskStatusTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskStatusTable.h; sourceTree = "<group>"; };
+		6B273A1B1B919A1B0065A4C5 /* TaskStatusTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskStatusTable.m; sourceTree = "<group>"; };
+		6B273A1D1B91B6370065A4C5 /* LocalPersistOC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalPersistOC.h; sourceTree = "<group>"; };
+		6B273A1E1B91B6370065A4C5 /* LocalPersistOC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalPersistOC.m; sourceTree = "<group>"; };
+		6B273A201B91E1110065A4C5 /* DODOData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DODOData.sqlite; sourceTree = "<group>"; };
 		6B41A9EB1B8877DA000E1ABA /* DODO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DODO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B41A9EF1B8877DA000E1ABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B41A9F01B8877DA000E1ABA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +77,25 @@
 		6B41AA041B8877DA000E1ABA /* DODOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DODOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B41AA091B8877DA000E1ABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B41AA0A1B8877DA000E1ABA /* DODOTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DODOTests.m; sourceTree = "<group>"; };
+		6B41AA141B887879000E1ABA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		6B41AA161B88788B000E1ABA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6B41AA181B8878B1000E1ABA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6B41AA1A1B8878BD000E1ABA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		6B41AA1C1B8878C5000E1ABA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		6B41AA1E1B8878D5000E1ABA /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		6B41AA201B8878E3000E1ABA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6B41AA221B8878F0000E1ABA /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		6B41AA241B8878FB000E1ABA /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		6B41AA261B887909000E1ABA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		6B41AA281B887911000E1ABA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6B41AA2A1B88791C000E1ABA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		6B41AA2C1B88797E000E1ABA /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
+		6B41AA2E1B8879F9000E1ABA /* RemoteSynBmob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteSynBmob.h; sourceTree = "<group>"; };
+		6B41AA2F1B8879F9000E1ABA /* RemoteSynBmob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteSynBmob.m; sourceTree = "<group>"; };
+		6B41AA321B887BC9000E1ABA /* TaskStoreTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskStoreTable.h; sourceTree = "<group>"; };
+		6B41AA331B887BC9000E1ABA /* TaskStoreTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskStoreTable.m; sourceTree = "<group>"; };
+		6B41AA351B887EB7000E1ABA /* UserTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTable.h; sourceTree = "<group>"; };
+		6B41AA361B887EB7000E1ABA /* UserTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTable.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +103,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B41AA2D1B88797E000E1ABA /* BmobSDK.framework in Frameworks */,
+				6B41AA2B1B88791C000E1ABA /* MediaPlayer.framework in Frameworks */,
+				6B41AA291B887911000E1ABA /* AVFoundation.framework in Frameworks */,
+				6B41AA271B887909000E1ABA /* libsqlite3.dylib in Frameworks */,
+				6B41AA251B8878FB000E1ABA /* libicucore.dylib in Frameworks */,
+				6B41AA231B8878F0000E1ABA /* libz.1.2.5.dylib in Frameworks */,
+				6B41AA211B8878E3000E1ABA /* SystemConfiguration.framework in Frameworks */,
+				6B41AA1F1B8878D5000E1ABA /* CoreTelephony.framework in Frameworks */,
+				6B41AA1D1B8878C5000E1ABA /* CFNetwork.framework in Frameworks */,
+				6B41AA1B1B8878BD000E1ABA /* MobileCoreServices.framework in Frameworks */,
+				6B41AA191B8878B1000E1ABA /* CoreGraphics.framework in Frameworks */,
+				6B41AA171B88788B000E1ABA /* Security.framework in Frameworks */,
+				6B41AA151B887879000E1ABA /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +129,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B273A0A1B9160750065A4C5 /* LocalPersist */ = {
+			isa = PBXGroup;
+			children = (
+				6B273A0F1B91624F0065A4C5 /* SQLiteDB.swift */,
+				6B273A101B91624F0065A4C5 /* String-Extras.swift */,
+				6B273A0D1B91616F0065A4C5 /* LocalPersistSQLite.swift */,
+				6B273A0C1B91616F0065A4C5 /* DODO-Bridging-Header.h */,
+				6B273A1D1B91B6370065A4C5 /* LocalPersistOC.h */,
+				6B273A1E1B91B6370065A4C5 /* LocalPersistOC.m */,
+			);
+			name = LocalPersist;
+			sourceTree = "<group>";
+		};
+		6B273A0B1B9161080065A4C5 /* RemoteSyn */ = {
+			isa = PBXGroup;
+			children = (
+				6B41AA2E1B8879F9000E1ABA /* RemoteSynBmob.h */,
+				6B41AA2F1B8879F9000E1ABA /* RemoteSynBmob.m */,
+			);
+			name = RemoteSyn;
+			sourceTree = "<group>";
+		};
+		6B273A131B9182880065A4C5 /* common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
 		6B41A9E21B8877DA000E1ABA = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +179,10 @@
 		6B41A9ED1B8877DA000E1ABA /* DODO */ = {
 			isa = PBXGroup;
 			children = (
+				6B273A131B9182880065A4C5 /* common */,
+				6B273A0B1B9161080065A4C5 /* RemoteSyn */,
+				6B273A0A1B9160750065A4C5 /* LocalPersist */,
+				6B41AA311B887B83000E1ABA /* Data */,
 				6B41A9F21B8877DA000E1ABA /* AppDelegate.h */,
 				6B41A9F31B8877DA000E1ABA /* AppDelegate.m */,
 				6B41A9F51B8877DA000E1ABA /* ViewController.h */,
@@ -96,6 +198,20 @@
 		6B41A9EE1B8877DA000E1ABA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6B273A201B91E1110065A4C5 /* DODOData.sqlite */,
+				6B41AA2C1B88797E000E1ABA /* BmobSDK.framework */,
+				6B41AA2A1B88791C000E1ABA /* MediaPlayer.framework */,
+				6B41AA281B887911000E1ABA /* AVFoundation.framework */,
+				6B41AA261B887909000E1ABA /* libsqlite3.dylib */,
+				6B41AA241B8878FB000E1ABA /* libicucore.dylib */,
+				6B41AA221B8878F0000E1ABA /* libz.1.2.5.dylib */,
+				6B41AA201B8878E3000E1ABA /* SystemConfiguration.framework */,
+				6B41AA1E1B8878D5000E1ABA /* CoreTelephony.framework */,
+				6B41AA1C1B8878C5000E1ABA /* CFNetwork.framework */,
+				6B41AA1A1B8878BD000E1ABA /* MobileCoreServices.framework */,
+				6B41AA181B8878B1000E1ABA /* CoreGraphics.framework */,
+				6B41AA161B88788B000E1ABA /* Security.framework */,
+				6B41AA141B887879000E1ABA /* CoreLocation.framework */,
 				6B41A9EF1B8877DA000E1ABA /* Info.plist */,
 				6B41A9F01B8877DA000E1ABA /* main.m */,
 			);
@@ -117,6 +233,23 @@
 				6B41AA091B8877DA000E1ABA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B41AA311B887B83000E1ABA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6B41AA321B887BC9000E1ABA /* TaskStoreTable.h */,
+				6B41AA331B887BC9000E1ABA /* TaskStoreTable.m */,
+				6B41AA351B887EB7000E1ABA /* UserTable.h */,
+				6B41AA361B887EB7000E1ABA /* UserTable.m */,
+				6B273A141B91985D0065A4C5 /* TaskNowTable.h */,
+				6B273A151B91985D0065A4C5 /* TaskNowTable.m */,
+				6B273A171B9198DC0065A4C5 /* TaskLogTable.h */,
+				6B273A181B9198DC0065A4C5 /* TaskLogTable.m */,
+				6B273A1A1B919A1B0065A4C5 /* TaskStatusTable.h */,
+				6B273A1B1B919A1B0065A4C5 /* TaskStatusTable.m */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +335,7 @@
 				6B41A9FA1B8877DA000E1ABA /* Main.storyboard in Resources */,
 				6B41A9FF1B8877DA000E1ABA /* LaunchScreen.xib in Resources */,
 				6B41A9FC1B8877DA000E1ABA /* Images.xcassets in Resources */,
+				6B273A211B91E1110065A4C5 /* DODOData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +353,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B273A0E1B91616F0065A4C5 /* LocalPersistSQLite.swift in Sources */,
+				6B273A1F1B91B6370065A4C5 /* LocalPersistOC.m in Sources */,
+				6B273A111B91624F0065A4C5 /* SQLiteDB.swift in Sources */,
+				6B273A161B91985D0065A4C5 /* TaskNowTable.m in Sources */,
+				6B41AA301B8879F9000E1ABA /* RemoteSynBmob.m in Sources */,
 				6B41A9F71B8877DA000E1ABA /* ViewController.m in Sources */,
+				6B273A121B91624F0065A4C5 /* String-Extras.swift in Sources */,
 				6B41A9F41B8877DA000E1ABA /* AppDelegate.m in Sources */,
+				6B41AA341B887BC9000E1ABA /* TaskStoreTable.m in Sources */,
 				6B41A9F11B8877DA000E1ABA /* main.m in Sources */,
+				6B273A191B9198DC0065A4C5 /* TaskLogTable.m in Sources */,
+				6B41AA371B887EB7000E1ABA /* UserTable.m in Sources */,
+				6B273A1C1B919A1B0065A4C5 /* TaskStatusTable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,9 +491,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DODO",
+				);
 				INFOPLIST_FILE = DODO/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DODO/DODO-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -357,9 +508,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DODO",
+				);
 				INFOPLIST_FILE = DODO/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DODO/DODO-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -416,6 +573,7 @@
 				6B41AA101B8877DA000E1ABA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6B41AA111B8877DA000E1ABA /* Build configuration list for PBXNativeTarget "DODOTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +582,7 @@
 				6B41AA131B8877DA000E1ABA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

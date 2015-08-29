@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "BmobSDK/Bmob.h"
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
+        NSString *appkey = @"6a4a6071385b9b66a4646218d5b2accf";
+        [Bmob registerWithAppKey:appkey];
+        
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }
