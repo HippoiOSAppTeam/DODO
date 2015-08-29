@@ -196,7 +196,7 @@ private let SQLITE_TRANSIENT = sqlite3_destructor_type(COpaquePointer(bitPattern
 
 // MARK:- SQLiteDB Class - Does all the work
 @objc class SQLiteDB {
-	let DB_NAME = "data.db"
+	let DB_NAME = "DODOData.sqlite"
 	let QUEUE_LABLE = "SQLiteDB"
 	private var db:COpaquePointer = nil
 	private var queue:dispatch_queue_t
