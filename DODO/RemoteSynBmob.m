@@ -11,7 +11,7 @@
 
 @implementation RemoteSynBmob
 
-- (BOOL)Signin:(UserTable *)user {
++ (BOOL)Signin:(UserTable *)user {
     __block BOOL returnbool;
     [BmobUser loginWithUsernameInBackground:user.UserID password:user.UserPass block:^(BmobUser *user, NSError *error) {
         if (error != nil) {
@@ -24,7 +24,7 @@
     return returnbool;
 }
 
-- (BOOL)InsertTaskStoreToBmob:(TaskStoreTable *)task {
++ (BOOL)InsertTaskStoreToBmob:(TaskStoreTable *)task {
     __block BOOL returnbool;
     BmobObject *taskstore = [BmobObject objectWithClassName:@"taskstore"];
     [taskstore setObject:task.TaskID forKey:@"task_ID"];
@@ -51,12 +51,35 @@
     return returnbool;
 }
 
-- (NSArray *)DownloadTasksFromBmob:(NSString *)timeflag {
-    BmobQuery *bquery = [BmobQuery queryWithClassName:@"taskstore"];
-    [bquery whereKey:@"task_timeflag" greaterThan:timeflag];
++ (BOOL)DeleteTaskStoreToBmob:(TaskStoreTable *)task {
+    __block BOOL returnbool;
+    BmobObject *taskstore = [BmobObject objectWithoutDatatWithClassName:@"taskstore" objectId:task.TaskID ];
+    [taskstore deleteInBackgroundWithBlock:^(BOOL isSuccessful, NSError *error) {
+        returnbool = isSuccessful;
+    }];
+    return returnbool;
+}
+
++ (NSString *)SynTasksFromBmob {
+    
+    TaskStatusTable *taskstatus = [LocalPersistOC getTaskStatus];
+    
+    NSString *timeflag = taskstatus.StatusTaskDown;
+    
+    int downnum = 0;
+    int upnum = 0;
+    double newtimeflag=0;
+    
+    NSArray *userlist = [LocalPersistOC getUserList:@"select * from userlist where user_localsign='1'"];
+    UserTable *luser = [userlist objectAtIndex:0];
+    
+    BmobQuery *bquery = [[BmobQuery alloc] init];
+    NSString *bql = [NSString stringWithFormat:@"select * from taskstore where task_timeflag>'%@' and (task_owner='%@' or task_resource='%@')",timeflag,luser.UserID,luser.UserID];
+
+    
     __block NSMutableArray *tasklist = [[NSMutableArray alloc] initWithCapacity:1];
-    [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
-        for (BmobObject *obj in array) {
+    [bquery queryInBackgroundWithBQL:bql block:^(BQLQueryResult *result, NSError *error) {
+        for (BmobObject *obj in result.resultsAry) {
             TaskStoreTable *task = [[TaskStoreTable alloc] init];
             task.TaskID  = [obj objectForKey:@"task_ID"];
             task.TaskName  = [obj objectForKey:@"task_name"];
@@ -78,8 +101,53 @@
             task.TaskStatus  = [obj objectForKey:@"task_status"];
             [tasklist addObject:task];
         }
+        
     }];
-    return tasklist;
+    
+    
+    NSMutableArray *localtasklist = [NSMutableArray arrayWithArray:[LocalPersistOC getUserList:[NSString stringWithFormat:@"select * from taskstore where task_timeflag>'%@'",timeflag]]];
+    for ( TaskStoreTable *rtask in tasklist ) {
+        newtimeflag = (newtimeflag > rtask.TaskTimeFlag.doubleValue) ? newtimeflag : rtask.TaskTimeFlag.doubleValue;
+        int localhas = 0;
+        for ( TaskStoreTable *ltask in localtasklist ) {
+            if (rtask.TaskID == ltask.TaskID) {
+                localhas = 1;
+                if (rtask.TaskTimeFlag.floatValue > ltask.TaskTimeFlag.floatValue) {
+                    [LocalPersistOC deleteTask:ltask];
+                    [LocalPersistOC saveNewTask:rtask];
+                    downnum++;
+                }
+                else if (rtask.TaskTimeFlag.floatValue < ltask.TaskTimeFlag.floatValue)
+                {
+                    [RemoteSynBmob DeleteTaskStoreToBmob:rtask];
+                    [RemoteSynBmob InsertTaskStoreToBmob:ltask];
+                    upnum++;
+                }
+            }
+        }
+        if (localhas == 0) {
+            [LocalPersistOC saveNewTask:rtask];
+            downnum++;
+        }
+    }
+    for ( TaskStoreTable *ltask in localtasklist ) {
+        newtimeflag = (newtimeflag > ltask.TaskTimeFlag.doubleValue) ? newtimeflag : ltask.TaskTimeFlag.doubleValue;
+        int remotehas = 0;
+        for ( TaskStoreTable *rtask in tasklist ) {
+            if (rtask.TaskID == ltask.TaskID) {
+                remotehas = 1;
+            }
+        }
+        if (remotehas == 0) {
+            [RemoteSynBmob InsertTaskStoreToBmob:ltask];
+            upnum++;
+        }
+    }
+    
+    taskstatus.StatusTaskDown = [NSString stringWithFormat:@"%f",newtimeflag ];
+    [LocalPersistOC updateTaskStatus:taskstatus];
+    
+    return [NSString stringWithFormat:@"共上传%i条，下载%i条",upnum,downnum];
 }
 
 @end

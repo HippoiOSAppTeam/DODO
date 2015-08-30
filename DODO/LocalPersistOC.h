@@ -13,6 +13,7 @@
 
 + (BOOL)saveNewTask:(TaskStoreTable *)task;
 + (NSArray *)getTaskList:(NSString *)sql;
++ (BOOL)deleteTask:(TaskStoreTable *)task;
 + (BOOL)insertNewUser:(UserTable *) tuser ;
 + (NSArray *)getUserList:(NSString *) sql ;
 + (BOOL)updateTaskNow:(TaskNowTable *) tasknow;

@@ -54,6 +54,17 @@ class LocalPersistSQLite: NSObject {
         return tasklist
     }
     
+    func deleteTask(task : TaskStoreTable) -> Bool {
+        let sql = "delete from taskstore where task_ID=?"
+        let params = [task.TaskID]
+        let ret = db.execute(sql, parameters: params )
+        if(ret > 0)
+        {
+            return true
+        }
+        return false
+    }
+    
     func insertNewUser(tuser : UserTable) -> Bool {
         let sql = "insert into userlist values('\(tuser.UserID)','\(tuser.UserName)','\(tuser.UserPass)','\(tuser.UserLocalSign)')"
         db.execute(sql)
@@ -104,7 +115,7 @@ class LocalPersistSQLite: NSObject {
     }
     
     func insertTaskLog(tasklog : TaskLogTable) ->Bool {
-        let sql = "insert into tasklog(log_ID,log_date,task_ID,task_owner,task_group,task_resource,do_begtime,do_endtime,do_timer,do_rate,log_timeflag)"
+        let sql = "insert into tasklog(log_ID,log_date,task_ID,task_owner,task_group,task_resource,do_begtime,do_endtime,do_timer,do_rate,log_timeflag) values(?,?,?,?,?,?,?,?,?,?,?)"
         let params = [tasklog.LogID,tasklog.LogDate,tasklog.TaskID,tasklog.TaskOwner,tasklog.TaskGroup,tasklog.TaskResource,tasklog.DoBegtime,tasklog.DoEndtime,tasklog.DoTimer,tasklog.DoRate,tasklog.LogTimeFlag];
         let ret = db.execute(sql, parameters: params)
         if(ret > 0)

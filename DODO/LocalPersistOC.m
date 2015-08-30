@@ -16,6 +16,11 @@
     return [ls saveNewTask:task];
 }
 
++ (BOOL)deleteTask:(TaskStoreTable *)task {
+    LocalPersistSQLite *ls = [[LocalPersistSQLite alloc] init];
+    return [ls deleteTask:task];
+}
+
 + (NSArray *)getTaskList:(NSString *)sql {
     LocalPersistSQLite *ls = [[LocalPersistSQLite alloc] init];
     return [ls getTaskList:sql];
